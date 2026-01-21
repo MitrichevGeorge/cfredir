@@ -11,6 +11,7 @@ node server.js
 ## Search engine
 В настройках (firefox - `about:preferences#search`) можно его добавить в строку поиска:
 <img width="630" height="288" alt="image" src="https://github.com/user-attachments/assets/64179d12-09a5-4e96-81e7-f0d2d1cd355f" />
+
 Надо написать в поле: 
 ```
 https://raspberrypi.taildfcdfd.ts.net/cf/go?q=%s
