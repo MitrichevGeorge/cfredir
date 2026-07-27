@@ -3,22 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <title>Codeforces Redirect</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#0f1115" />
+  <meta name="color-scheme" content="dark" />
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <input
       id="cfInput"
+      class="cf-input"
+      type="text"
+      inputmode="text"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
       placeholder="CF 474B — Worms"
+      aria-label="Номер задачи Codeforces"
       autofocus
     />
-    <div class="hint">
+    <p class="hint">
       Поддерживается: 474B, CF 474B, 474B Worms
-    </div>
-    <div class="link" id="link"></div>
-  </div>
+    </p>
+    <div class="link" id="link" aria-live="polite"></div>
+  </main>
   <script src="/scripts.js"></script>
 </body>
 </html>
-

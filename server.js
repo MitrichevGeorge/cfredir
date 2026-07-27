@@ -23,7 +23,7 @@ function parseCF(input) {
 function send(res, status, body, type = 'text/plain') {
   res.writeHead(status, {
     'Content-Type': type,
-    'Content-Security-Policy': "default-src 'self'",
+    'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'Referrer-Policy': 'no-referrer'
