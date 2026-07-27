@@ -5,7 +5,8 @@ const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || '127.0.0.1';
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
 function parseCF(input) {
@@ -73,7 +74,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, '127.0.0.1', () => {
-  console.log(`CF redirect server running on http://127.0.0.1:${PORT}`);
+server.listen(PORT, HOST, () => {
+  console.log(`CF redirect server running on http://${HOST}:${PORT}`);
 });
 

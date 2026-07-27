@@ -8,6 +8,20 @@ open codeforces task by number
 node server.js
 ```
 
+## Docker
+
+Сначала нужно убедиться, что запущен Docker-демон:
+- **Linux:** `sudo systemctl start docker` (или `sudo service docker start`)
+- **Windows / macOS:** запустите Docker Desktop
+
+Собрать образ и запустить контейнер:
+```bash
+docker build -t cfredir .
+docker run -p 3000:3000 cfredir
+```
+
+Сервер будет доступен на `http://localhost:3000`.
+
 ## Search engine
 В настройках (firefox - `about:preferences#search`) можно его добавить в строку поиска:
 <img width="630" height="288" alt="image" src="https://github.com/user-attachments/assets/64179d12-09a5-4e96-81e7-f0d2d1cd355f" />
