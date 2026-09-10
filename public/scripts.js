@@ -3,7 +3,7 @@ const linkBox = document.getElementById('link');
 
 function parseCF(text) {
     if (!text) return null;
-    const match = text.toUpperCase().match(/(\d{3,5})\s*([A-Z])/);
+    const match = text.toUpperCase().match(/(\d{1,5})\s*([A-Z])/);
     if (!match) return null;
     return { contest: match[1], problem: match[2] };
 }
